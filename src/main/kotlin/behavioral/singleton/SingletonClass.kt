@@ -1,6 +1,6 @@
 package behavioral.singleton
 
-class SingletonClass {
+class SingletonClass private constructor(){
     var id : String = ""
 
     companion object {

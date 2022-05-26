@@ -1,14 +1,9 @@
 package structural.adapter
 
-class RawSMS(message: String) {
+class RawSMS(var message: String = "") {
     var transactionID: String = ""
     var timestamp: String = ""
-    var message: String = ""
     var shortcode: String = ""
     var recipient: String = ""
     var sender: String = ""
-
-    init {
-        this.message = message
-    }
 }

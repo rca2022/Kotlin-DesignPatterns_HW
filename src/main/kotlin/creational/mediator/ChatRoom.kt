@@ -2,8 +2,9 @@ package creational.mediator
 
 import java.util.*
 
-object ChatRoom {
-    fun showMessage(user: User, message: String) {
-        println(Date().toString() + " [ " + user.name + "] : " + message)
+class Chatroom {
+    companion object {
+        fun showMessage(user: User, message : String) =
+            "${Date()} [${user}] : ${message}"
     }
 }

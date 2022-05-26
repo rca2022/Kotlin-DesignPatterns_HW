@@ -1,6 +1,6 @@
 package structural.facade
 
 class Delivery {
-    fun retrievePackage(item: Item) = "Retrieved ${item.itemName} "
-    fun assignPackage(item: Item) = "Assigned ${item.itemName} "
+    fun retrievePackage(item: Item) = "Retrieve package of ${item.name} "
+    fun assignPackage(item: Item) = "Assign package of ${item.name} "
 }

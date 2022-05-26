@@ -3,21 +3,21 @@ import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class BuilderTest {
-    val builder = Form.FormBuilder("FirstName", "LastName")
+    private val builder = Form.FormBuilder("Juan", "Cruz")
 
     @Test
     fun checkFirstName(){
-        assertEquals("FirstName", builder.build().firstName)
+        assertEquals("Juan", builder.build().firstName)
     }
 
     @Test
     fun checkLastName(){
-        assertEquals("LastName", builder.build().lastName)
+        assertEquals("Cruz", builder.build().lastName)
     }
 
     @Test
     fun checkAddress(){
-        builder.addAddress("address")
-        assertEquals("address", builder.build().address)
+        builder.addAddress("San Juan")
+        assertEquals("San Juan", builder.build().address)
     }
 }

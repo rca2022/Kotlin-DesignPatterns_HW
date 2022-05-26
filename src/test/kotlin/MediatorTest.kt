@@ -1,5 +1,6 @@
 import creational.mediator.User
 import org.junit.jupiter.api.Test
+import java.util.*
 import kotlin.test.assertEquals
 
 class MediatorTest {
@@ -7,21 +8,20 @@ class MediatorTest {
     val john = User("John")
 
     @Test
-    fun checkChatRoomUsers(){
+    fun checkChatRoomUser(){
         assertEquals("${robert}", "Robert")
-        assertEquals("${john}", "John")
     }
 
     @Test
-    fun checkMessages(){
-        val robert = User("Robert")
-        val john = User("John")
-
-        val message1 = robert.sendMessage("Hi! John!")
-        val message2 = robert.sendMessage("Hi! Robert!")
-
-
+    fun hiMessageTest(){
+        val message = robert.sendMessage("Hi John!")
+        assertEquals("${Date()} [${robert}] : Hi John!", message)
     }
 
+    @Test
+    fun helloMessageTest(){
+        val message = john.sendMessage("Hello Robert!")
+        assertEquals("${Date()} [${john}] : Hello Robert!", message)
+    }
 
 }

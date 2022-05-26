@@ -1,36 +1,34 @@
 import structural.facade.ShopFacade
 import org.junit.jupiter.api.Test
 import structural.facade.Item
-import kotlin.test.DefaultAsserter.assertEquals
 import kotlin.test.assertEquals
 
 
 class FacadeTest {
-    val shop = ShopFacade()
-    var item = Item("Item 1", 599.0, 3)
+    private val shop = ShopFacade()
+    private val item1 = Item("Item 1", 5.00, 30)
 
     @Test
-    fun checkFacade(){
-        shop.checkDelivery()
+    fun addItemTest(){
+        assertEquals(shop.addItem(item1), "Added ${item1.name}")
     }
 
     @Test
-    fun checkItem(){
-        assertEquals(shop.checkItem(), "Reserved ${item.itemName}")
+    fun checkoutTest(){
+        shop.addItem(item1)
+        assertEquals(shop.checkout(), "Reserved ${item1.name}")
     }
 
     @Test
-    fun checkAddItem(){
-        assertEquals(shop.addItem(item), "Added ${item.itemName}")
+    fun payTest(){
+        shop.addItem(item1)
+        assertEquals(shop.pay(), 168.00)
     }
 
     @Test
-    fun checkPrice(){
-        assertEquals(shop.checkPrice(), 599.0)
-    }
-
-    @Test
-    fun checkDelivery(){
-        assertEquals(shop.checkDelivery(), "Retrieved ${item.itemName} Assigned ${item.itemName} ")
+    fun deliverTest(){
+        shop.addItem(item1)
+        assertEquals(shop.deliver(),
+            "Retrieve package of ${item1.name} Assign package of ${item1.name} ")
     }
 }

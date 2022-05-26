@@ -23,20 +23,13 @@ class Form private constructor(builder: FormBuilder){
         this.spouseLastName = builder.spouseLastName
     }
 
-    class FormBuilder(firstName: String, lastName: String) {
-        var firstName: String = ""
+    class FormBuilder(var firstName: String, var lastName: String) {
         var middleName: String = ""
-        var lastName: String = ""
         var address: String = ""
         var birthDate : Date? = null
         var spouseFirstName: String = ""
         var spouseMiddleName: String = ""
         var spouseLastName: String = ""
-
-        init {
-            this.firstName = firstName
-            this.lastName = lastName
-        }
 
         fun addMiddleName(middleName: String) : FormBuilder {
             this.middleName = middleName
