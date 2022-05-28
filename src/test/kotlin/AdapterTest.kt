@@ -41,4 +41,13 @@ class AdapterTest {
         assertNotEquals("PROMO MESSAGE", promoProcessing.message)
     }
 
+    @Test
+    fun checkNoMessage(){
+        val rawSMS = RawSMS("")
+        val promoProcessing = PromoAdapter(rawSMS)
+        promoProcessing.registerPromo()
+
+        assertNotEquals("PROMO MESSAGE", promoProcessing.message)
+    }
+
 }
