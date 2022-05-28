@@ -10,6 +10,14 @@ class MediatorTest {
     @Test
     fun checkChatRoomUser(){
         assertEquals("${robert}", "Robert")
+        assertEquals("${john}", "John")
+    }
+
+    @Test
+    fun checkNoName(){
+        val noName = User("")
+        val noNameMSG = noName.sendMessage("")
+        assertEquals("Please input name", noNameMSG)
     }
 
     @Test
