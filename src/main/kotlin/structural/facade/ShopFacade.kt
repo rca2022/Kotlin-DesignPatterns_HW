@@ -8,8 +8,12 @@ class ShopFacade {
     private var item : Item? = null
 
     fun addItem(item : Item) : String {
-        this.item = item
-        return "Added ${item.name}"
+        return if (item.name == "")
+            "Please input name of item."
+        else {
+            this.item = item
+            "Added ${item.name}"
+        }
     }
 
     fun checkout() : String {

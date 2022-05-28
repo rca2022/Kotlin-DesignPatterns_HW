@@ -21,6 +21,12 @@ class FacadeTest {
     }
 
     @Test
+    fun itemNoNameTest(){
+        val item3 = Item("", 4.00, 20)
+        assertEquals(shop.addItem(item3), "Please input name of item.")
+    }
+
+    @Test
     fun checkoutTest(){
         shop.addItem(item1)
         assertEquals(shop.checkout(), "Reserved ${item1.name}")
