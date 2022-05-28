@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FacadeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-05-26T09:40:24" hostname="DESKTOP-KK1HLKL" time="0.026">
-  <properties/>
-  <testcase name="checkAddItem()" classname="FacadeTest" time="0.026"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

@@ -24,4 +24,10 @@ class MediatorTest {
         assertEquals("${Date()} [${john}] : Hello Robert!", message)
     }
 
+    @Test
+    fun blankMessageTest(){
+        val message = robert.sendMessage("")
+        assertEquals("${Date()} [${robert}] : ", message)
+    }
+
 }
