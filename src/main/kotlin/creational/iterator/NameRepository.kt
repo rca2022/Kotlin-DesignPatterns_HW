@@ -20,5 +20,9 @@ class NameRepository : Container {
             }
             return ""
         }
+
+        override fun getTotal(): Int {
+            return names.size
+        }
     }
 }
